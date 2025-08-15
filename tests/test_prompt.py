@@ -1,5 +1,5 @@
 import argparse
-from promptify import make_prompt
+from promptdump import make_prompt
 
 
 def test_prompt():
