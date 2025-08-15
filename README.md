@@ -1,4 +1,4 @@
-# Promptify
+# Promptdump
 
 A command-line tool to quickly gather and format code and directory structures for AI prompts.
 This can be useful for creating prompts for e.g. Google AI Studio, which has a large context limit.
@@ -10,10 +10,10 @@ This can be useful for creating prompts for e.g. Google AI Studio, which has a l
 
 ```bash
 # Install using pipx (recommended)
-pipx install promptify
+pipx install promptdump
 
 # Or run without installing
-uvx promptify
+uvx promptdump
 ```
 
 ## Usage
@@ -22,50 +22,50 @@ uvx promptify
 
 Scan current directory (default extensions: .md, .py, .cpp, .hpp, .js, .ts, .java, .go, .rs, .c, .h) and copy to clipboard:
 ```bash
-promptify
+promptdump
 ```
 
 Scan specific file types:
 ```bash
 # Only Python and JavaScript files
-promptify .py .js
+promptdump .py .js
 ```
 
 Include specific files by name:
 ```bash
 # Include specific files regardless of extension
-promptify -f pyproject.toml README.md
+promptdump -f pyproject.toml README.md
 ```
 
 Combine file types and specific files:
 ```bash
 # Include Python files and specific config files
-promptify .py -f requirements.txt config.json
+promptdump .py -f requirements.txt config.json
 ```
 
 Scan a different directory:
 ```bash
-promptify -d /path/to/project
+promptdump -d /path/to/project
 ```
 
 Save output to a file:
 ```bash
-promptify -o output.txt
+promptdump -o output.txt
 ```
 
 Save output to stdout (useful for piping to other commands):
 ```bash
-promptify -o -
+promptdump -o -
 ```
 
 Use a custom exclude file (default: .gitignore):
 ```bash
-promptify -e .gitignore_custom
+promptdump -e .gitignore_custom
 ```
 
 Enable verbose output:
 ```bash
-promptify -v
+promptdump -v
 ```
 
 ## Options
